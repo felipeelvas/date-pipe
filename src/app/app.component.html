@@ -1,4 +1,44 @@
-<h1>Formato ISO 8601:</h1>
+<!-- <h1>Formato ISO 8601:</h1>
 <b>Data Convertida para Região: </b> {{ minhaData | date : 'full' }}
 <br><br>
 <b>Data UTC-0:</b>{{ minhaData | date : 'full' : '+0000' }}
+<br><br>
+<h1>Formato Timestamp</h1>
+<b>Timestamp para região: </b>{{ 1722723720000 | date : 'full'}}
+<br><br>
+<b>Timestamp UTC-0: </b>{{ 1722723720000 | date : 'full' : '+0000'}}
+<br><br>
+<h1>Formato Date Obj</h1>
+<b>Data Convertida para Região:</b> {{ minhaDataObj | date : 'full'}}
+<br><br>
+<b>Data UTC-0:</b> {{ minhaDataObj | date : 'full' : '+000'}}
+<br><br><br><br><br><br> -->
+
+<h1>Formatações</h1>
+Curto:      {{'2024-08-03T22:22:00.000Z' | date : 'short'}} <br>
+Médio:      {{'2024-08-03T22:22:00.000Z' | date : 'medium'}} <br>
+Longo:      {{'2024-08-03T22:22:00.000Z' | date : 'long'}} <br>
+Completo:   {{'2024-08-03T22:22:00.000Z' | date : 'full'}} <br>
+shortDate:  {{'2024-08-03T22:22:00.000Z' | date : 'shortDate'}} <br>
+mediumDate: {{'2024-08-03T22:22:00.000Z' | date : 'mediumDate'}} <br>
+longDate:   {{'2024-08-03T22:22:00.000Z' | date : 'longDate'}} <br>
+fullDate:   {{'2024-08-03T22:22:00.000Z' | date : 'fullDate'}} <br>
+shortTime:  {{'2024-08-03T22:22:00.000Z' | date : 'shortTime'}} <br>
+mediumTime: {{'2024-08-03T22:22:00.000Z' | date : 'mediumTime'}} <br>
+longTime:   {{'2024-08-03T22:22:00.000Z' | date : 'longTime'}} <br>
+fullTime:   {{'2024-08-03T22:22:00.000Z' | date : 'fullTime'}} <br>
+
+<br>"Hoje é Sunday dia 04 de August de 2024":<br>
+<p>{{minhaData | date : "'Hoje é' EEEE 'dia' dd 'de' MMMM 'de' YYYY."  }}</p>
+<br><br>
+<br>"Hoje é Sunday dia 04 de August de 2024 ás 11:30":<br>
+<p>{{minhaData | date : "'Hoje é' EEEE 'dia' dd 'de' MMMM 'de' YYYY 'ás' HH:mm"  }}</p>
+<br><br>
+<br>"Hoje é Sunday dia 04 de August de 2024 ás 11:30" GMT-03:00:<br>
+<p>{{minhaData | date : "'Hoje é' EEEE 'dia' dd 'de' MMMM 'de' YYYY 'ás' HH:mm zzzz"  }}</p>
+<br><br>
+<br>"Hoje é Sunday dia 04 de August de 2024 ás 11:30" GMT-03:00:<br>
+<p>{{'2024-08-03T22:22:00.000Z' | date : "'Hoje é' EEEE 'dia' dd 'de' MMMM 'de' YYYY 'ás' HH:mm OOOO" : '+0000' }}</p>
+<br><br>
+<br>"Data: 04/08/2024 Hora: 13:14 PM"<br>
+<p>{{minhaData | date : "'Data:' dd/MM/YYYY 'Hora: ' HH:mm a"  }}</p>
