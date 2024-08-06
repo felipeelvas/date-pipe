@@ -7,6 +7,7 @@ import { DATE_PIPE_DEFAULT_OPTIONS, DatePipeConfig } from '@angular/common';
 
 import  localePt  from '@angular/common/locales/pt';
 import { registerLocaleData } from '@angular/common';
+import { DecimalPipeComponent } from './decimal-pipe/decimal-pipe.component';
 
 const datePipeConfig: DatePipeConfig = {
       dateFormat: "'Data: 'dd/MM/YYYY",
@@ -17,7 +18,8 @@ registerLocaleData(localePt, 'pt-BR' );
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DecimalPipeComponent
   ],
   imports: [
     BrowserModule,
