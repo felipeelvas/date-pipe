@@ -9,6 +9,9 @@ import  localePt  from '@angular/common/locales/pt';
 import { registerLocaleData } from '@angular/common';
 import { DecimalPipeComponent } from './decimal-pipe/decimal-pipe.component';
 import { CurrencyPipeComponent } from './currency-pipe/currency-pipe.component';
+import { AsyncPipeComponent } from './async-pipe/async-pipe.component';
+import { ObsComObjetoComponent } from './async-pipe/components/obs-com-objeto/obs-com-objeto.component';
+import { HttpClientModule } from '@angular/common/http';
 
 const datePipeConfig: DatePipeConfig = {
       dateFormat: "'Data: 'dd/MM/YYYY",
@@ -21,11 +24,14 @@ registerLocaleData(localePt, 'pt-BR' );
   declarations: [
     AppComponent,
     DecimalPipeComponent,
-    CurrencyPipeComponent
+    CurrencyPipeComponent,
+    AsyncPipeComponent,
+    ObsComObjetoComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [
     { provide: LOCALE_ID, useValue: 'pt_BR' },
