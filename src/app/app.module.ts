@@ -12,6 +12,7 @@ import { CurrencyPipeComponent } from './currency-pipe/currency-pipe.component';
 import { AsyncPipeComponent } from './async-pipe/async-pipe.component';
 import { ObsComObjetoComponent } from './async-pipe/components/obs-com-objeto/obs-com-objeto.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ObsComArrayComponent } from './async-pipe/components/obs-com-array/obs-com-array.component';
 
 const datePipeConfig: DatePipeConfig = {
       dateFormat: "'Data: 'dd/MM/YYYY",
@@ -26,7 +27,8 @@ registerLocaleData(localePt, 'pt-BR' );
     DecimalPipeComponent,
     CurrencyPipeComponent,
     AsyncPipeComponent,
-    ObsComObjetoComponent
+    ObsComObjetoComponent,
+    ObsComArrayComponent
   ],
   imports: [
     BrowserModule,
